@@ -178,12 +178,12 @@ module.exports = function (app) {
         Note.findOneAndRemove({
             '_id': req.body._id
         }, function (err, doc) {
-            // Log any errors
+            
             if (err) {
                 console.log("error:", err);
                 res.json(err);
             }
-            // Or log the doc
+            
             else {
                 res.json(doc);
             }
