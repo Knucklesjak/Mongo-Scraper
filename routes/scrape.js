@@ -13,14 +13,14 @@ module.exports = function (app) {
         request("https://www.foreignaffairs.com/", function (error, response, html) {
 
             
-            var $ = cheerio.load(html);
+            var $ = cheerio.load(response.data);
 
           
-            $("article.story").each(function (i, element) {
+            $("article h2").each(function (i, element) {
                 var result = {};
                  
-                result.summary = $(element).children("p.summary").text();
-                result.byline = $(element).children("p.byline").text();
+                result.summary = $(element).children("h3").text();
+                result.byline = $(element).children("h2").text();
                 result.title = $(element).children("h2").text();
                 result.link = $(element).children("h2").children("a").attr("href");
                 
