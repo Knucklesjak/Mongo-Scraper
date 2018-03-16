@@ -1,0 +1,19 @@
+.nav-wrapper {
+	background-color:#000000;
+}
+
+a#save {
+	margin-left: 15px;
+}
+
+.card-action a {
+	color: black !important;
+}
+
+body {
+	background-image: url("../images/background.png");
+}
+
+.delte-button {
+	margin-left: 15px;
+}
